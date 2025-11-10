@@ -1,3 +1,13 @@
+Metadata-Version: 2.4
+Name: codex-demo
+Version: 0.1.0
+Summary: Demo CLI for Codex
+Author-email: James Covington <jamesgcovington@icloud.com>
+License-Expression: MIT
+Keywords: codex,demo,cli
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+
 # Codex Demo
 
 Starter project.

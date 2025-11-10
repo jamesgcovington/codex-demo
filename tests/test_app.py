@@ -41,5 +41,18 @@ class VersionFlagTests(unittest.TestCase):
         self.assertEqual(exit_ctx.exception.code, 0)
 
 
+class HelpFlagTests(unittest.TestCase):
+    def test_help_prints_usage_and_exits(self) -> None:
+        buf = io.StringIO()
+        with redirect_stdout(buf), self.assertRaises(SystemExit) as exit_ctx:
+            main(["--help"])  # argparse prints usage then exits(0)
+        out = buf.getvalue()
+        assert "usage:" in out.lower()
+        assert "--shout" in out
+        assert "--name" in out
+        assert "--version" in out
+        assert exit_ctx.exception.code == 0
+
+
 if __name__ == "__main__":
     unittest.main()

@@ -9,14 +9,11 @@ description = "Demo CLI for Codex"
 readme = "README.md"
 requires-python = ">=3.11"
 authors = [{ name = "James Covington", email = "jamesgcovington@icloud.com" }]
-license = "MIT"
+license = { text = "MIT" }
 keywords = ["codex", "demo", "cli"]
 
 [project.scripts]
-codex-demo = "codex_demo:main"
-
-[tool.setuptools]
-packages = ["codex_demo"]
+codex-demo = "app:main"
 
 [tool.black]
 line-length = 88
