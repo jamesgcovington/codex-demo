@@ -21,6 +21,12 @@ def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
         action="store_true",
         help="Print the greeting in uppercase.",
     )
+    parser.add_argument(
+        "--name",
+        type=str,
+        default=None,
+        help="Optional name to personalize the greeting.",
+    )
     return parser.parse_args(argv)
 
 
@@ -28,6 +34,8 @@ def main(argv: Sequence[str] | None = None) -> None:
     """Print the greeting when the module is executed as a script."""
     args = parse_args(argv)
     greeting = get_greeting()
+    if args.name:
+        greeting = f"{greeting}, {args.name}"
     if args.shout:
         greeting = greeting.upper()
     print(greeting)

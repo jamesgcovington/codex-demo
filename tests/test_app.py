@@ -18,5 +18,19 @@ class MainTests(unittest.TestCase):
         self.assertEqual(buffer.getvalue().strip(), "HELLO FROM CODEX DEMO")
 
 
+class NameFlagTests(unittest.TestCase):
+    def test_main_prints_name_when_provided(self) -> None:
+        buffer = io.StringIO()
+        with redirect_stdout(buffer):
+            main(["--name", "James"])
+        self.assertEqual(buffer.getvalue().strip(), "hello from codex demo, James")
+
+    def test_main_shout_with_name(self) -> None:
+        buffer = io.StringIO()
+        with redirect_stdout(buffer):
+            main(["--name", "James", "--shout"])
+        self.assertEqual(buffer.getvalue().strip(), "HELLO FROM CODEX DEMO, JAMES")
+
+
 if __name__ == "__main__":
     unittest.main()
