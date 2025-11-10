@@ -6,6 +6,7 @@ import argparse
 from typing import Sequence
 
 GREETING = "hello from codex demo"
+VERSION = "v0.1.0"
 
 
 def get_greeting() -> str:
@@ -26,6 +27,12 @@ def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
         type=str,
         default=None,
         help="Optional name to personalize the greeting.",
+    )
+    parser.add_argument(
+        "--version",
+        action="version",
+        version=VERSION,
+        help="Show the script version and exit.",
     )
     return parser.parse_args(argv)
 
