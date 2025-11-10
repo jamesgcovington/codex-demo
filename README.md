@@ -11,3 +11,11 @@ python3 app.py --name James    # hello from codex demo, James
 python3 app.py --name James --shout  # HELLO FROM CODEX DEMO, JAMES
 ```
 # New test line
+
+## Changelog
+
+### v0.1.0
+- Added GitHub Actions CI
+- Added pre-commit hooks (Black + Ruff)
+- Verified SSH & repo sync
+
