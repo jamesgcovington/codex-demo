@@ -16,4 +16,3 @@
 ## Style
 - Python 3.11+, black formatting.
 - Use clear, small commits with descriptive messages.
-
