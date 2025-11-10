@@ -1,2 +1,0 @@
-[console_scripts]
-codex-demo = codex_demo:main

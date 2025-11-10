@@ -2,7 +2,7 @@ import io
 import unittest
 from contextlib import redirect_stdout
 
-from app import get_greeting, main
+from codex_demo import get_greeting, main
 
 
 class GetGreetingTests(unittest.TestCase):
